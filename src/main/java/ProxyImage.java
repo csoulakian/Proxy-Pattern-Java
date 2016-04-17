@@ -2,6 +2,8 @@
  * Chrissy Soulakian
  * ProxyPattern Project
  * Created on 4/16/2016
+ *
+ * This is the virtual proxy that controls access to and references the HighResolutionImage.
  */
 public class ProxyImage implements ImageInterface {
 
