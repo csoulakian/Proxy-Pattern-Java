@@ -15,9 +15,17 @@ high resolution is only created when the client asks for it to be displayed. Bef
 displaying the image, the proxy checks if the image was already created in which case
 it will still have a reference to the image. If the proxy still has a reference to the
 image, then it will forward the subsequent display requests directly to the image,
- bypass the loading process, and go directly to displaying the image. Proxy is a useful
+bypass the loading process, and go directly to displaying the image. Proxy is a useful
 pattern for this case because it is expensive to load a high resolution image each time
- the display method is called.
+the display method is called.
+
+Run main method in
+
+    src/main/java/ObserverPattern
+
+Run tests in
+
+    src/test/java/WeatherStationTest
 
 Resources used:
 - https://en.wikipedia.org/wiki/Proxy_pattern#Java
