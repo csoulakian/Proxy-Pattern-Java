@@ -27,6 +27,10 @@ public class ProxyImageTest {
         System.setOut(null);
     }
 
+    /**
+     * Showing an image once requires the image to load first.
+     * @throws Exception
+     */
     @Test
     public void testShowImageOnce() throws Exception {
         final ImageInterface IMAGE1 = new ProxyImage("Image");
@@ -39,6 +43,12 @@ public class ProxyImageTest {
         assertEquals(result2, output[1].trim());
     }
 
+    /**
+     * Showing an image twice requires the image to load the first time.
+     * The second time the image is shown, it can be displayed right
+     * away - does not need to load again.
+     * @throws Exception
+     */
     @Test
     public void testShowImageTwice() throws Exception {
         final ImageInterface IMAGE1 = new ProxyImage("Image");
