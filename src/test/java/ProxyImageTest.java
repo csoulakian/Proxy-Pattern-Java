@@ -15,6 +15,8 @@ import static org.junit.Assert.*;
 public class ProxyImageTest {
 
     private final ByteArrayOutputStream myOut = new ByteArrayOutputStream();
+    private static final String loading = "Loading Image";
+    private static final String displaying = "Displaying Image";
 
     @Before
     public void setUp() throws Exception {
@@ -35,11 +37,9 @@ public class ProxyImageTest {
         final ImageInterface IMAGE1 = new ProxyImage("Image");
         IMAGE1.showImage();
         String[] output = myOut.toString().split("\n");
-        String result1 = "Loading Image";
-        String result2 = "Displaying Image";
 
-        assertEquals(result1, output[0].trim());
-        assertEquals(result2, output[1].trim());
+        assertEquals(loading, output[0].trim());
+        assertEquals(displaying, output[1].trim());
     }
 
     /**
@@ -54,11 +54,9 @@ public class ProxyImageTest {
         IMAGE1.showImage();
         IMAGE1.showImage();
         String[] output = myOut.toString().split("\n");
-        String result1 = "Loading Image";
-        String result2 = "Displaying Image";
 
-        assertEquals(result1, output[0].trim());
-        assertEquals(result2, output[1].trim());
-        assertEquals(result2, output[2].trim());
+        assertEquals(loading, output[0].trim());
+        assertEquals(displaying, output[1].trim());
+        assertEquals(displaying, output[2].trim());
     }
 }
