@@ -1,5 +1,10 @@
 # Proxy-Pattern-Java
-COMP 373/473 - Objects/Frameworks/Patterns - Spring 2016 - Project 3 Proxy Pattern
+
+**Loyola University Chicago**
+
+**COMP 373/473 - Objects/Frameworks/Patterns**
+
+**Spring 2016 - Project 3 Proxy Pattern**
 
 The purpose of a proxy is to act as an intermediate object between the client and the
 target object. The proxy provides a placeholder for another object to control access
@@ -13,9 +18,6 @@ image, then it will forward the subsequent display requests directly to the imag
  bypass the loading process, and go directly to displaying the image. Proxy is a useful
 pattern for this case because it is expensive to load a high resolution image each time
  the display method is called.
-
-
-
 
 Resources used:
 - https://en.wikipedia.org/wiki/Proxy_pattern#Java
